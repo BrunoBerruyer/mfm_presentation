@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Parcours - Bruno Berruyer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="parcours.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    
+    <div class="container parcours-container">
+        <header class="parcours-header">
+            <h1 class="parcours-title">MON PARCOURS</h1>
+            <h2 class="parcours-subtitle">
+                ENTRE POLYVALENCE ET <span class="highlight">PASSIONS INCHANGÉES</span>
+            </h2>
+        </header>
+        
+        <div class="timeline">
+            
+            <div class="timeline-item" data-year="2004-2008">
+                <div class="timeline-content">
+                    <div class="timeline-year">2004-2008</div>
+                    <div class="timeline-card">
+                        <img src="isfsc.png" alt="ISFSC" class="timeline-logo">
+                        <h3>BACHELIER EN<br>ÉCRITURE MULTIMÉDIA</h3>
+                        <p>DIRECTION D'UNE<br>ASBL CULTURELLE</p>
+                        <p>WEBMASTER ET JOURNALISTE<br>AU CONSEIL DE LA MUSIQUE</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-year="2009-2014">
+                <div class="timeline-content">
+                    <div class="timeline-year">2009-2014</div>
+                    <div class="timeline-card">
+                        <img src="mex.png" alt="Mexique" class="timeline-logo flag">
+                        <h3>WEBMASTER + COM</h3>
+                        <p>GUIDE TOURISTIQUE<br>BARMAN</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-year="2015-2024">
+                <div class="timeline-content">
+                    <div class="timeline-year">2015-2024</div>
+                    <div class="timeline-card">
+                        <img src="cora.png" alt="Cora" class="timeline-logo">
+                        <h3>EMPLOYÉ COMMERCIAL</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-year="2024-2025">
+                <div class="timeline-content">
+                    <div class="timeline-year">2024-2025</div>
+                    <div class="timeline-card">
+                        <img src="impact.png" alt="Branding" class="timeline-logo icon">
+                        <h3>BRANDING<br>COM</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-item active" data-year="TODAY">
+                <div class="timeline-content">
+                    <div class="timeline-year">TODAY</div>
+                    <div class="timeline-card special">
+                        <img src="rocket.png" alt="Nouveau décollage" class="timeline-logo">
+                        <h3 class="new-start">NOUVEAU DÉCOLLAGE chez MFM DIGITAL ?!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <a href="realisations.html" class="cta-button">MES RÉALISATIONS</a>
+        </div>
+    </div>
+    
+    <!-- Popup pour l'image Mexique -->
+    <div id="mexico-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <img src="mexico-experience.png" alt="Mon expérience au Mexique" class="popup-image">
+            <p class="popup-caption">Tribu Tours</p>
+        </div>
+    </div>
+    
+    <!-- Popup galerie pour Branding -->
+    <div id="branding-popup" class="popup-overlay">
+        <div class="popup-content gallery">
+            <span class="close-popup">&times;</span>
+            <h3 class="gallery-title">Impact Players</h3>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="impact01.png" alt="Projet branding 1" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="impact02.png" alt="Projet branding 2" class="gallery-image">
+                </div>
+            </div>
+            <div class="gallery-nav">
+                <button class="prev-btn">‹</button>
+                <button class="next-btn">›</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="parcours.js"></script>
+</body>
+</html>

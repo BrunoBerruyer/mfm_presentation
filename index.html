@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Berruyer - Candidat Stage MFM Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles background -->
+    <div id="particles-js"></div>
+    
+    <!-- Animated background gradient -->
+    <div class="gradient-bg"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="name glitch" data-text="BRUNO BERRUYER">BRUNO BERRUYER</h1>
+            <h2 class="title">CANDIDAT STAGE EN ALTERNANCE <span class="company">MFM DIGITAL</span></h2>
+        </header>
+        
+        <div class="image-section">
+            <div class="image-wrapper">
+                <div class="image-border"></div>
+                <img src="FB.png" alt="EFP - Formateur de talents" class="efp-image">
+            </div>
+        </div>
+        
+        <div class="subtitle-section">
+            <p class="subtitle">DÉBUT DE DEUXIÈME ANNÉE EN UX/UI DESIGN</p>
+        </div>
+        
+        <div class="cta-section">
+            <a href="parcours.html" class="cta-button">MON PARCOURS</a>
+        </div>
+    </div>
+
+    <script>
+        // Typing effect for subtitle
+        const subtitle = document.querySelector('.subtitle');
+        const text = subtitle.textContent;
+        subtitle.textContent = '';
+        subtitle.style.opacity = '1';
+        
+        let index = 0;
+        function typeWriter() {
+            if (index < text.length) {
+                subtitle.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        
+        // Start animations after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1500);
+            
+            // Add fade-in class to elements
+            document.querySelector('.name').classList.add('fade-in');
+            document.querySelector('.title').classList.add('fade-in');
+            document.querySelector('.image-wrapper').classList.add('fade-in');
+            document.querySelector('.cta-button').classList.add('fade-in');
+        });
+        
+        // Mouse move effect
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelector('.gradient-bg').style.transform = 
+                `translate(${x * 20}px, ${y * 20}px)`;
+        });
+        
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.container');
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
